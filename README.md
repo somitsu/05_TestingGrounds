@@ -5,3 +5,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG5 Use git clean to Revert Project
 - TG6 First Person Character Overview
 - TG7 The Third Person Character
+- TG8 Introducing AI Behaviour Trees
