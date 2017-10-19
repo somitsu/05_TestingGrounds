@@ -3,3 +3,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 
 - TG4 Marketing & Markdown
 - TG5 Use git clean to Revert Project
+- TG6 First Person Character Overview
