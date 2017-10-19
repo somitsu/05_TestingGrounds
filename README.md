@@ -6,3 +6,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG6 First Person Character Overview
 - TG7 The Third Person Character
 - TG8 Introducing AI Behaviour Trees
+- TG9 Introducing AI Blackboard Data
