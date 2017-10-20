@@ -29,6 +29,12 @@ private:
 public:
 
 protected:
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector indexKey;
+
+	//UPROPERTY(EditAnywhere, Category = "Blackboard")
+	
+
 
 private:
 
