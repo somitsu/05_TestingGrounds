@@ -8,3 +8,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG8 Introducing AI Behaviour Trees
 - TG9 Introducing AI Blackboard Data
 - TG10 Target Points and Patrol Routes
+- TG11 Using Any Actor for Waypoints
