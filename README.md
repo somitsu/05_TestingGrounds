@@ -15,3 +15,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG15 Performance Profiling 101
 - TG16 C++ AI Behaviour Tree Tasks
 - TG17 Reading Blackboard Data in C++
+- TG18 The Consequences of Inheritance
