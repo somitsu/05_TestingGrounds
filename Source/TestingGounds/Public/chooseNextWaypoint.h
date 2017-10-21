@@ -23,14 +23,17 @@ protected:
 
 private:
 
-
-
 //////////////////////////////////////Properties//////////////////////////////////////	
 public:
 
 protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	struct FBlackboardKeySelector indexKey;
+
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector nextWaypointKey;
+
+	TArray<AActor*> patrolPoints;
 
 	//UPROPERTY(EditAnywhere, Category = "Blackboard")
 	

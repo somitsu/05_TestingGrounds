@@ -27,10 +27,10 @@ private:
 
 	//////////////////////////////////////Properties//////////////////////////////////////	
 public:
-
-protected:
 	UPROPERTY(EditInstanceOnly, Category = "Patrol Route")
 	TArray<AActor * > patrolPointsCpp;
+protected:
+
 
 
 
