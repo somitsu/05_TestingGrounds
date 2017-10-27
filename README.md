@@ -21,3 +21,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG22 How to Delete a C++ Class
 - TG23 Instanced Materials
 - TG24 Introducing AI Perception
+- TG25 OnTargetPerceptionUpdate Event
