@@ -22,3 +22,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG23 Instanced Materials
 - TG24 Introducing AI Perception
 - TG25 OnTargetPerceptionUpdate Event
+- TG26 AI Hearing Perception in Unreal
