@@ -20,3 +20,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG20 Composition over Inheritance
 - TG22 How to Delete a C++ Class
 - TG23 Instanced Materials
+- TG24 Introducing AI Perception
