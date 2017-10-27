@@ -19,3 +19,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG19 Converting Blueprint to C++
 - TG20 Composition over Inheritance
 - TG22 How to Delete a C++ Class
+- TG23 Instanced Materials
