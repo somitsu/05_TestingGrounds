@@ -27,3 +27,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG28 Changing a Character's Animation
 - TG29 Customizing a Character Blueprint
 - TG30 Sub Behaviour Trees
+- TG35 Solution: Renaming & Moving CPP
