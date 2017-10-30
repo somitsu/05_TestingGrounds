@@ -25,3 +25,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG26 AI Hearing Perception in Unreal
 - TG27 The Animation Starter Pack
 - TG28 Changing a Character's Animation
+- TG29 Customizing a Character Blueprint
