@@ -28,3 +28,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG29 Customizing a Character Blueprint
 - TG30 Sub Behaviour Trees
 - TG35 Solution: Renaming & Moving CPP
+- TG36 Holding a Gun with Skeltal Sockets
