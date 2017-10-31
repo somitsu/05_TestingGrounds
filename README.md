@@ -33,3 +33,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG38 Creating Animation State Machines
 - TG39 Movement Blend Spaces
 - TG40 Offset Animations
+- TG41 Aiming Blend Spaces Offsets
