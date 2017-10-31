@@ -35,3 +35,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG40 Offset Animations
 - TG41 Aiming Blend Spaces Offsets
 - TG42 Rotating with SetFocalPoint()
+- TG43 Character Movement vs Rotation
