@@ -40,3 +40,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG45 Behaviour Tree Decorators
 - TG46 Behaviour Tree Services
 - TG47 Tweaking AI Behaviour
+- TG48 Debugging AI Behaviour
