@@ -66,8 +66,12 @@ void AFirstPersonCharacter::BeginPlay()
 	FP_Gun = GetWorld()->SpawnActor<AGun>(gunBlueprint);
 	if (!ensure(FP_Gun)) { return; }
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-
-	
+	FP_Gun->AnimInstance = Mesh1P->GetAnimInstance();
+	if (EnableTouchscreenMovement(InputComponent) == false)
+	{
+		//PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AFirstPersonCharacter::OnFire);
+		InputComponent->BindAction("Fire", IE_Pressed, FP_Gun, &AGun::OnFire);
+	}
 
 	//// Show or hide the two versions of the gun based on whether or not we're using motion controllers.
 	//if (bUsingMotionControllers)
@@ -94,10 +98,7 @@ void AFirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	//InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AFirstPersonCharacter::TouchStarted);
-	if (EnableTouchscreenMovement(PlayerInputComponent) == false)
-	{
-		//PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AFirstPersonCharacter::OnFire);
-	}
+
 
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AFirstPersonCharacter::OnResetVR);
 
