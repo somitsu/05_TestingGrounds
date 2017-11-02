@@ -41,3 +41,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG46 Behaviour Tree Services
 - TG47 Tweaking AI Behaviour
 - TG48 Debugging AI Behaviour
+- TG49 Refactoring to a Gun Actor
