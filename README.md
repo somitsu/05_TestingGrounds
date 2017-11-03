@@ -50,3 +50,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG55 Introduction to Inverse Kinematics
 - TG56 Inverse Kinematics with Animations
 - TG57 Comparing Blueprints with Diffs
+- TG58 Boolean Blending for Aim States
