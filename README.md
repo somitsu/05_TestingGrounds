@@ -52,3 +52,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG57 Comparing Blueprints with Diffs
 - TG58 Boolean Blending for Aim States
 - TG59 Adding Firing Animations
+- TG60 Animation Notify Events

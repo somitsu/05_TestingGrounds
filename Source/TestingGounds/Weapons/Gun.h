@@ -25,6 +25,8 @@ public:
 	// Sets default values for this actor's properties
 	AGun();
 	/** Fires a projectile. */
+	
+	UFUNCTION(BlueprintCallable, Category = "Callable Action")
 	void OnFire();
 
 protected:
