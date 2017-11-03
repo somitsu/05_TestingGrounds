@@ -49,3 +49,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG54 Child Actor Component
 - TG55 Introduction to Inverse Kinematics
 - TG56 Inverse Kinematics with Animations
+- TG57 Comparing Blueprints with Diffs
