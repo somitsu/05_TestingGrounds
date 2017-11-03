@@ -48,3 +48,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG53 To LFS or Not to LFS?
 - TG54 Child Actor Component
 - TG55 Introduction to Inverse Kinematics
+- TG56 Inverse Kinematics with Animations
