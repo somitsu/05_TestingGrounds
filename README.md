@@ -44,3 +44,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG49 Refactoring to a Gun Actor
 - TG50 Attaching Actors to Components
 - TG51 Configuring the Gun
+- TG52 Moving Files from LFS to Git
