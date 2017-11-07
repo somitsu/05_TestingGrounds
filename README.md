@@ -69,3 +69,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG74 Dynamically Calculating NavMesh
 - TG75 Keep It Simple Stupid
 - TG76 Parallel Behaviour Tree Tasks
+- TG77 Custom BT Tasks and Decorators
