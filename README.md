@@ -63,3 +63,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG68 Spawning Terrain in the GameMode
 - TG69 Level Gating for Testing Grounds
 - TG70 Swapping Materials in Blueprint
+- TG71 Garbage Collecting Previous Tiles
