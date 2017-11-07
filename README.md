@@ -56,3 +56,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG61 Taking Damage in Blueprint
 - TG62 Death Animations and Refactors
 - TG63 Switching 1st and 3rd Person
+- TG64 Owner Invisible Meshes
