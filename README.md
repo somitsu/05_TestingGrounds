@@ -58,3 +58,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG63 Switching 1st and 3rd Person
 - TG64 Owner Invisible Meshes
 - TG65 Separating Firing from Gun Meshes
+- TG66 Aiming Our 1st Person Camera
