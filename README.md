@@ -62,3 +62,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG67 Architecture of Infinite Runners
 - TG68 Spawning Terrain in the GameMode
 - TG69 Level Gating for Testing Grounds
+- TG70 Swapping Materials in Blueprint
