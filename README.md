@@ -61,3 +61,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG66 Aiming Our 1st Person Camera
 - TG67 Architecture of Infinite Runners
 - TG68 Spawning Terrain in the GameMode
+- TG69 Level Gating for Testing Grounds
