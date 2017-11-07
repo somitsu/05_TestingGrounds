@@ -66,3 +66,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG71 Garbage Collecting Previous Tiles
 - TG72 Merging Our TP and FP Files
 - TG73 Hit vs Overlap Events
+- TG74 Dynamically Calculating NavMesh
