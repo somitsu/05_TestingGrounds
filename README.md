@@ -71,3 +71,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG76 Parallel Behaviour Tree Tasks
 - TG77 Custom BT Tasks and Decorators
 - TF78 External Build Data in 4.14+
+- TG79 Physical Gun Architecture
