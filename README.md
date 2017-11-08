@@ -76,3 +76,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG81 Who's Pulled the Trigger?
 - TG82 Cooldown Nodes & Game Tags
 - TG83 Animation Montages and Slots
+- TG84 Reattaching the Gun
