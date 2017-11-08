@@ -39,6 +39,11 @@ void AMannequin::BeginPlay()
 	if (!ensure(FP_Gun)) { return; }
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 	FP_Gun->AnimInstance = Mesh1P->GetAnimInstance();
+
+	if (InputComponent != nullptr)
+	{
+		InputComponent->BindAction("Fire", IE_Pressed, this, &AMannequin::PullTrigger);
+	}
 	
 }
 
@@ -54,9 +59,10 @@ void AMannequin::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+
 }
 
-void AMannequin::Fire()
+void AMannequin::PullTrigger()
 {
 	FP_Gun->OnFire();
 

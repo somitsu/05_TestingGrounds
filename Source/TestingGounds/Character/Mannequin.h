@@ -37,7 +37,7 @@ public:
 	
 	
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		void Fire();
+		void PullTrigger();
 
 protected:
 	// Called when the game starts or when spawned
