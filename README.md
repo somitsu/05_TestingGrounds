@@ -74,3 +74,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG79 Physical Gun Architecture
 - TG80 Converting a Character BP to C++
 - TG81 Who's Pulled the Trigger?
+- TG82 Cooldown Nodes & Game Tags
