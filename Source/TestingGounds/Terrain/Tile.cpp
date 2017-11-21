@@ -13,7 +13,7 @@ ATile::ATile()
 
 }
 
-void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn, float radius)
+void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn, float radius, float minScale, float maxScale)
 {
 
 	int numToSpawn = FMath::RandRange(minSpawn, maxSpawn);
@@ -21,10 +21,14 @@ void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn,
 	for (int i = 0; i < numToSpawn; i++)
 	{
 		FVector spawnPoint;
-		bool found = findEmptyLocation(spawnPoint, radius);
+		float randomScale = 1.0f;
+		randomScale = FMath::RandRange(minScale, maxScale);
+
+		bool found = findEmptyLocation(spawnPoint, radius*randomScale);
 		if (found)
 		{
-			placeActor(ToSpawn, spawnPoint);
+			float randomRotation = FMath::RandRange(-180.0f, 180.0f);
+			placeActor(ToSpawn, spawnPoint, randomRotation, randomScale);
 		}
 	}
 }
@@ -51,7 +55,7 @@ bool ATile::findEmptyLocation(FVector& outLocation, float radius)
 	FVector min(0, -2000, 0);
 	FVector max(4000, 2000, 0);
 	FBox bounds(min, max);
-	const int MAX_ATTEMPTS = 100;
+	const int MAX_ATTEMPTS = 20;
 	for (size_t i = 0; i < MAX_ATTEMPTS; i++)
 	{
 		FVector candidatePoint = FMath::RandPointInBox(bounds);
@@ -64,11 +68,13 @@ bool ATile::findEmptyLocation(FVector& outLocation, float radius)
 	return false;
 }
 
-void ATile::placeActor(TSubclassOf<AActor> ToSpawn, FVector spawnPoint)
+void ATile::placeActor(TSubclassOf<AActor> ToSpawn, FVector spawnPoint, float rotation, float scale)
 {
 	AActor * Spawned = GetWorld()->SpawnActor<AActor>(ToSpawn);
 	Spawned->SetActorRelativeLocation(spawnPoint);
 	Spawned->AttachToActor(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	Spawned->SetActorRotation(FRotator(0, rotation, 0));
+	Spawned->SetActorScale3D(FVector(scale));
 }
 
 bool ATile::canSpawnAtLocation(FVector location, float radius)
@@ -85,7 +91,7 @@ bool ATile::canSpawnAtLocation(FVector location, float radius)
 		FCollisionShape::MakeSphere(radius)
 		);
 	FColor resultColor = hasHit ? FColor::Red : FColor::Green;
-	DrawDebugCapsule(GetWorld(), globalLocation, 0, radius, FQuat::Identity, resultColor, true, 100);
+	//DrawDebugCapsule(GetWorld(), globalLocation, 0, radius, FQuat::Identity, resultColor, true, 100);
 	return !hasHit;
 }
 

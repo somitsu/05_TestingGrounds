@@ -15,7 +15,12 @@ public:
 	// Sets default values for this actor's properties
 	ATile();
 	UFUNCTION(BlueprintCallable, Category = "Tile")
-		void PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn = 1, int maxSpawn = 1, float radius = 500);
+		void PlaceActors(TSubclassOf<AActor> ToSpawn, 
+						int minSpawn = 1, 
+						int maxSpawn = 1, 
+						float radius = 500, 
+						float minScale = 1.0f, 
+						float maxScale = 1.0f);
 
 
 
@@ -29,7 +34,7 @@ public:
 
 private:
 	bool findEmptyLocation(FVector& outLocation, float radius);
-	void placeActor(TSubclassOf<AActor> ToSpawn, FVector spawnPoint);
+	void placeActor(TSubclassOf<AActor> ToSpawn, FVector spawnPoint, float rotation, float scale);
 
 	bool canSpawnAtLocation(FVector location, float radius);
 	
