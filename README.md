@@ -88,3 +88,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG93 Choosing Waypoint with EQS
 - TG94 Find Actors of Type from C++
 - TG95 Plumbing an Actor Pool Setup
+- TG96 Using the Pool API

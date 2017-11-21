@@ -3,6 +3,7 @@
 #include "Tile.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
+#include "ActorPool.h"
 
 
 // Sets default values
@@ -42,6 +43,15 @@ void ATile::BeginPlay()
 	
 }
 
+void ATile::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	UE_LOG(LogTemp, Warning, TEXT("[%s]End Play"), *GetName());
+	//if (!poolReference) { return; }
+	//if (!nmbvReference) { return; }
+	poolReference->returnActor(nmbvReference);
+
+}
+
 // Called every frame
 void ATile::Tick(float DeltaTime)
 {
@@ -49,10 +59,20 @@ void ATile::Tick(float DeltaTime)
 
 }
 
-void ATile::setPool(UActorPool * pool)
+void ATile::setPool(UActorPool * inPool)
 {
 	UE_LOG(LogTemp, Warning, TEXT("getting set"));
-	poolReference = pool;
+	poolReference = inPool;
+
+	positionNavMeshBoundsVolume();
+
+}
+
+void ATile::positionNavMeshBoundsVolume()
+{
+	nmbvReference = poolReference->checkOutActor();
+	if (!ensure(nmbvReference)) { return; }
+	nmbvReference->SetActorLocation(GetActorLocation());
 }
 
 bool ATile::findEmptyLocation(FVector& outLocation, float radius)
