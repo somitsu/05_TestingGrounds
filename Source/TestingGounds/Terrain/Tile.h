@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ATile();
 	UFUNCTION(BlueprintCallable, Category = "Tile")
-		void PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn);
+		void PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn = 1, int maxSpawn = 1, float radius = 500);
 
 
 
@@ -28,6 +28,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	bool CastSphere(FVector location, float radius);
+	bool findEmptyLocation(FVector& outLocation, float radius);
+	void placeActor(TSubclassOf<AActor> ToSpawn, FVector spawnPoint);
+
+	bool canSpawnAtLocation(FVector location, float radius);
 	
 };
