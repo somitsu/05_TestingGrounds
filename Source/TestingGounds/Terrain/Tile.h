@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ATile();
 	UFUNCTION(BlueprintCallable, Category = "Tile")
-		void PlaceActors();
+		void PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn);
 
 
 
