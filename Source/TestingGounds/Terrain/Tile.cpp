@@ -49,6 +49,12 @@ void ATile::Tick(float DeltaTime)
 
 }
 
+void ATile::setPool(UActorPool * pool)
+{
+	UE_LOG(LogTemp, Warning, TEXT("getting set"));
+	poolReference = pool;
+}
+
 bool ATile::findEmptyLocation(FVector& outLocation, float radius)
 {
 	FVector min(0, -2000, 0);
