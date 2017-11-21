@@ -81,3 +81,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG86 Generating Random Numbers
 - TG87 Spawning Actors in the Tile
 - TG88 Sphere Casting in C++
+- TG89 Configuring Custom Trace Channels
