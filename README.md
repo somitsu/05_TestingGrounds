@@ -86,3 +86,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG91 Randomizing Rotation & Scales
 - TG92 Flyweight Pattern for Foliage
 - TG93 Choosing Waypoint with EQS
+- TG94 Find Actors of Type from C++

@@ -37,8 +37,7 @@ void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn,
 void ATile::BeginPlay()
 {
 	Super::BeginPlay();
-	//CastSphere(GetActorLocation(), 300);
-	//CastSphere(GetActorLocation() + FVector(0,0,1000) , 300);
+
 
 	
 }
