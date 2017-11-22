@@ -96,3 +96,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG101 Understanding Function Templates
 - TG102 Template Specialization
 - TG103 Fixing Double Spawning
+- TG104 Keeping Score
