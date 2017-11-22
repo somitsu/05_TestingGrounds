@@ -5,6 +5,7 @@
 #include "DrawDebugHelpers.h"
 #include "ActorPool.h"
 #include "AI/Navigation/NavigationSystem.h"
+#include "GameFramework/Pawn.h"
 
 
 // Sets default values
@@ -26,6 +27,32 @@ void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn,
 		placeActor(ToSpawn, spawnPosition);
 	}
 
+}
+void ATile::PlaceAIPawns(TSubclassOf<APawn> ToSpawn, int minSpawn, int maxSpawn, float radius)
+{
+	TArray<FSpawnPosition> spawnPositions = randomSpawnPositions(minSpawn, maxSpawn, radius, 1, 1);
+	for (FSpawnPosition spawnPosition : spawnPositions)
+	{
+		placeAIPawn(ToSpawn, spawnPosition);
+	}
+
+}
+void ATile::placeActor(TSubclassOf<AActor> ToSpawn, FSpawnPosition spawnPosition)
+{
+	AActor * Spawned = GetWorld()->SpawnActor<AActor>(ToSpawn);
+	Spawned->SetActorRelativeLocation(spawnPosition.location);
+	Spawned->AttachToActor(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	Spawned->SetActorRotation(FRotator(0, spawnPosition.rotation, 0));
+	Spawned->SetActorScale3D(FVector(spawnPosition.scale));
+}
+void ATile::placeAIPawn(TSubclassOf<APawn> ToSpawn, FSpawnPosition spawnPosition)
+{
+	APawn * spawned = GetWorld()->SpawnActor<APawn>(ToSpawn);
+	spawned->SetActorRelativeLocation(spawnPosition.location);
+	spawned->AttachToActor(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+	spawned->SetActorRotation(FRotator(0, spawnPosition.rotation, 0));
+	spawned->SpawnDefaultController();
+	spawned->Tags.Add(FName("Enemy"));
 }
 TArray<FSpawnPosition> ATile::randomSpawnPositions(int minSpawn, int maxSpawn, float radius, float minScale, float maxScale)
 {
@@ -103,14 +130,7 @@ bool ATile::findEmptyLocation(FVector& outLocation, float radius)
 	return false;
 }
 
-void ATile::placeActor(TSubclassOf<AActor> ToSpawn, FSpawnPosition spawnPosition)
-{
-	AActor * Spawned = GetWorld()->SpawnActor<AActor>(ToSpawn);
-	Spawned->SetActorRelativeLocation(spawnPosition.location);
-	Spawned->AttachToActor(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
-	Spawned->SetActorRotation(FRotator(0, spawnPosition.rotation, 0));
-	Spawned->SetActorScale3D(FVector(spawnPosition.scale));
-}
+
 
 bool ATile::canSpawnAtLocation(FVector location, float radius)
 {

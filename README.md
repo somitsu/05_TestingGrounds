@@ -92,3 +92,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG97 Using TArray for Pools
 - TG98 Rebuilding Navigation Meshes
 - TG99 Structs to Simplify Function Args
+- TG100 Spawning AI from C++
