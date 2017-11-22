@@ -99,3 +99,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG104 Keeping Score
 - TG105 Using the HUD Class
 - TG106 Post Processing for Tunnel Vision
+- TG107 Recruiting Play Testers
