@@ -97,3 +97,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG102 Template Specialization
 - TG103 Fixing Double Spawning
 - TG104 Keeping Score
+- TG105 Using the HUD Class
