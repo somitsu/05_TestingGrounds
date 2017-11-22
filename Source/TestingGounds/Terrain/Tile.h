@@ -39,7 +39,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Pool")
 		void setPool(UActorPool * inPool);
 
-
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Spawning")
+		FVector minExtent;
+	UPROPERTY(EditDefaultsOnly, Category = "Spawning")
+		FVector maxExtent;
 
 
 private:

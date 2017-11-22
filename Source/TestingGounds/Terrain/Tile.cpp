@@ -11,7 +11,8 @@ ATile::ATile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	minExtent = FVector(0, -2000, 0);
+	maxExtent = FVector(4000, 2000, 0);
 }
 
 void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn, float radius, float minScale, float maxScale)
@@ -45,11 +46,7 @@ void ATile::BeginPlay()
 
 void ATile::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	UE_LOG(LogTemp, Warning, TEXT("[%s]End Play"), *GetName());
-	//if (!poolReference) { return; }
-	//if (!nmbvReference) { return; }
 	poolReference->returnActor(nmbvReference);
-
 }
 
 // Called every frame
@@ -61,25 +58,26 @@ void ATile::Tick(float DeltaTime)
 
 void ATile::setPool(UActorPool * inPool)
 {
-	UE_LOG(LogTemp, Warning, TEXT("getting set"));
 	poolReference = inPool;
-
 	positionNavMeshBoundsVolume();
-
 }
 
 void ATile::positionNavMeshBoundsVolume()
 {
-	nmbvReference = poolReference->checkOutActor();
-	if (!ensure(nmbvReference)) { return; }
+	nmbvReference = poolReference->checkoutActor();
+	if (!(nmbvReference)) 
+	{
+		UE_LOG(LogTemp, Warning, TEXT("[%s] Not enough actors in pool"), *GetName());
+		return; 
+	}
+	UE_LOG(LogTemp, Warning, TEXT("[%s] Checked out: {%s}"), *GetName(), *nmbvReference->GetName());
 	nmbvReference->SetActorLocation(GetActorLocation());
 }
 
 bool ATile::findEmptyLocation(FVector& outLocation, float radius)
 {
-	FVector min(0, -2000, 0);
-	FVector max(4000, 2000, 0);
-	FBox bounds(min, max);
+
+	FBox bounds(minExtent, maxExtent);
 	const int MAX_ATTEMPTS = 20;
 	for (size_t i = 0; i < MAX_ATTEMPTS; i++)
 	{
