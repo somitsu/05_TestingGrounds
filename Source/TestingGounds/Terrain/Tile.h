@@ -44,6 +44,8 @@ protected:
 		FVector minExtent;
 	UPROPERTY(EditDefaultsOnly, Category = "Spawning")
 		FVector maxExtent;
+	UPROPERTY(EditDefaultsOnly, Category = "Navigation")
+		FVector navigationBoundsOffset;
 
 
 private:

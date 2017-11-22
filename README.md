@@ -90,3 +90,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG95 Plumbing an Actor Pool Setup
 - TG96 Using the Pool API
 - TG97 Using TArray for Pools
+- TG98 Rebuilding Navigation Meshes

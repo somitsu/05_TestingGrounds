@@ -4,6 +4,7 @@
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
 #include "ActorPool.h"
+#include "AI/Navigation/NavigationSystem.h"
 
 
 // Sets default values
@@ -13,6 +14,7 @@ ATile::ATile()
 	PrimaryActorTick.bCanEverTick = true;
 	minExtent = FVector(0, -2000, 0);
 	maxExtent = FVector(4000, 2000, 0);
+	navigationBoundsOffset = FVector(2000, 0, 0);
 }
 
 void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn, float radius, float minScale, float maxScale)
@@ -39,9 +41,6 @@ void ATile::PlaceActors(TSubclassOf<AActor> ToSpawn, int minSpawn, int maxSpawn,
 void ATile::BeginPlay()
 {
 	Super::BeginPlay();
-
-
-	
 }
 
 void ATile::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -71,7 +70,8 @@ void ATile::positionNavMeshBoundsVolume()
 		return; 
 	}
 	UE_LOG(LogTemp, Warning, TEXT("[%s] Checked out: {%s}"), *GetName(), *nmbvReference->GetName());
-	nmbvReference->SetActorLocation(GetActorLocation());
+	nmbvReference->SetActorLocation(GetActorLocation()+navigationBoundsOffset);
+	GetWorld()->GetNavigationSystem()->Build();
 }
 
 bool ATile::findEmptyLocation(FVector& outLocation, float radius)
