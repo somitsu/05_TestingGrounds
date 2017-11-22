@@ -56,12 +56,14 @@ public:
 		void setPool(UActorPool * inPool);
 
 private:
-	TArray<FSpawnPosition> randomSpawnPositions(int minSpawn, int maxSpawn, float radius, float minScale, float maxScale);
 	bool findEmptyLocation(FVector& outLocation, float radius);
-	void placeActor(TSubclassOf<AActor> ToSpawn, FSpawnPosition spawnPosition);
-	void placeAIPawn(TSubclassOf<APawn> ToSpawn, FSpawnPosition spawnPosition);
 	bool canSpawnAtLocation(FVector location, float radius);
 	void positionNavMeshBoundsVolume();
+
+	template <class T>
+	void randomlyPlaceActors(TSubclassOf<T> ToSpawn, int minSpawn, int maxSpawn, float radius, float minScale, float maxScale);
+	void placeActor(TSubclassOf<AActor> ToSpawn, FSpawnPosition spawnPosition);
+	void placeActor(TSubclassOf<APawn> ToSpawn, FSpawnPosition spawnPosition);
 
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Spawning")

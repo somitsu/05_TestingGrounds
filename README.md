@@ -95,3 +95,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG100 Spawning AI from C++
 - TG101 Understanding Function Templates
 - TG102 Template Specialization
+- TG103 Fixing Double Spawning
