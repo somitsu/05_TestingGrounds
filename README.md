@@ -94,3 +94,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG99 Structs to Simplify Function Args
 - TG100 Spawning AI from C++
 - TG101 Understanding Function Templates
+- TG102 Template Specialization
