@@ -101,3 +101,4 @@ A Hunger-Games insipired FPS with large outdoor terrains.  Advanced AI, basic ne
 - TG106 Post Processing for Tunnel Vision
 - TG107 Recruiting Play Testers
 - TG108 Smooth Blending the Camera
+- TG109 Possessing and the View Target
