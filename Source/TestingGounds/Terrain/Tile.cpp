@@ -37,7 +37,8 @@ void ATile::placeActor(TSubclassOf<AActor> ToSpawn, FSpawnPosition spawnPosition
 }
 void ATile::placeActor(TSubclassOf<APawn> ToSpawn, FSpawnPosition spawnPosition)
 {
-	APawn * spawned = GetWorld()->SpawnActor<APawn>(ToSpawn);
+	FRotator rotation = FRotator(0, spawnPosition.rotation, 0);
+	APawn * spawned = GetWorld()->SpawnActor<APawn>(ToSpawn, spawnPosition.location, rotation);
 	if (!spawned) { return; }
 	spawned->SetActorRelativeLocation(spawnPosition.location);
 	spawned->AttachToActor(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
@@ -73,6 +74,8 @@ void ATile::BeginPlay()
 
 void ATile::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
+	if (!poolReference) { return; }
+	if (!nmbvReference) { return; }
 	poolReference->returnActor(nmbvReference);
 }
 
